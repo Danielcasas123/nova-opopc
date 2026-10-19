@@ -1,0 +1,17 @@
+NOVA PC — CREAR EL INSTALADOR SIN INSTALAR NODE.JS EN TU COMPUTADOR
+
+Este proyecto todavía no incluye un instalador .exe ya compilado. Este método usa GitHub Actions para compilarlo en servidores de GitHub; no instala Node.js en tu PC.
+
+PASOS:
+1. Crea una cuenta o inicia sesión en https://github.com/ (si está permitido por tu familia/escuela).
+2. Crea un repositorio nuevo llamado nova-pc. Puedes dejarlo privado.
+3. Sube TODO el contenido de esta carpeta al repositorio, incluida la carpeta .github/workflows.
+4. En GitHub, abre la pestaña Actions y habilita Actions si te lo pide.
+5. En la lista de flujos, elige “Build Nova PC for Windows” y pulsa “Run workflow”.
+6. Espera a que termine correctamente. Abre la ejecución y busca Artifacts; descarga “Nova-PC-Windows-x64”.
+7. Extrae el ZIP del artefacto y encontrarás el instalador .exe.
+
+NOTAS:
+- GitHub compila usando Node.js en sus propios servidores; no necesitas instalarlo localmente.
+- El .exe no está firmado digitalmente, por lo que Windows puede mostrar una advertencia. Solo ejecútalo si confías en el proyecto y entiendes su contenido.
+- Esto no desactiva Microsoft Family Safety ni otras políticas de Windows.

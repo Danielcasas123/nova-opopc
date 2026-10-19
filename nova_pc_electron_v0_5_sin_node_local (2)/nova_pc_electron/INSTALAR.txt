@@ -1,0 +1,31 @@
+NOVA PC 0.4 — APLICACIÓN DE ESCRITORIO PARA WINDOWS
+
+IMPORTANTE
+Este ZIP contiene el código fuente de la aplicación, no un instalador .exe ya compilado.
+Para generar el instalador necesitas Node.js y conexión a Internet para descargar Electron.
+
+PASOS
+1. Instala Node.js LTS desde https://nodejs.org/ (si está permitido en tu equipo).
+2. Extrae este ZIP en una carpeta normal, por ejemplo Documentos\NovaPC.
+3. Abre esa carpeta.
+4. Haz doble clic en CREAR_INSTALADOR.bat.
+5. Espera a que termine. El instalador aparecerá en la carpeta dist.
+6. Ejecuta el instalador de Nova PC desde dist y sigue las instrucciones.
+
+PARA PROBAR SIN COMPILAR
+En la carpeta extraída, abre una terminal y ejecuta:
+  npm install
+  npm start
+
+QUÉ INCLUYE
+- Ventana de aplicación propia de Windows.
+- Escritorio virtual con ventanas y barra de tareas.
+- Navegador Chromium integrado mediante Electron webview.
+- La barra de direcciones acepta URLs y búsquedas web.
+- YouTube usa el reproductor integrado oficial de la versión web del proyecto.
+
+LIMITACIONES
+- No es un sistema operativo ni una máquina virtual.
+- Algunas páginas pueden bloquear la reproducción incrustada, requerir inicio de sesión o no funcionar dentro de ventanas integradas.
+- Microsoft Family Safety, controles de Windows, políticas del dispositivo o filtros de red pueden seguir aplicándose. Este proyecto no está diseñado para desactivarlos ni evitarlos.
+- La instalación puede requerir permiso del administrador o estar bloqueada por la configuración del equipo. No intentes eludir esos controles; pide al adulto administrador que apruebe la instalación si hace falta.

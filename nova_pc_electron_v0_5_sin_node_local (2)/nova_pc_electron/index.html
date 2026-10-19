@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nova PC</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="desktop" id="desktop">
+  <header class="topbar"><div class="brand"><span class="brand-mark">✦</span>Nova PC</div><div class="status"><i></i> Sistema listo</div></header>
+  <nav class="desktop-icons" aria-label="Aplicaciones">
+    <button class="desktop-icon" data-open="browser"><span class="app-icon browser-icon">◉</span>Navegador</button>
+    <button class="desktop-icon" data-open="youtube"><span class="app-icon youtube-icon">▶</span>YouTube</button>
+    <button class="desktop-icon" data-open="about"><span class="app-icon settings-icon">⚙</span>Acerca de</button>
+  </nav>
+  <section class="window" id="browser-window" data-window="browser">
+    <div class="titlebar" data-drag><span>✦ &nbsp; Navegador Nova</span><div class="controls"><button data-minimize="browser" title="Minimizar">—</button><button data-maximize="browser" title="Maximizar">□</button><button class="close" data-close="browser" title="Cerrar">×</button></div></div>
+    <div class="toolbar"><button id="back">←</button><button id="forward">→</button><button id="reload">↻</button><form id="address-form"><span>⌕</span><input id="address" value="https://example.com" aria-label="Dirección web"><button type="submit">Ir</button></form><button id="external" title="Abrir en una pestaña nueva">↗</button></div>
+    <div class="notice">Inicio: example.com (sitio de prueba que permite mostrarse aquí). Muchos sitios reales bloquean los iframes; si una página queda en blanco, pulsa ↗ para abrirla aparte.</div>
+    <iframe id="browser-frame" title="Página web" src="https://example.com" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </section>
+  <section class="window hidden" id="youtube-window" data-window="youtube">
+    <div class="titlebar" data-drag><span><b class="yt-badge">▶</b> &nbsp; YouTube</span><div class="controls"><button data-minimize="youtube">—</button><button data-maximize="youtube">□</button><button class="close" data-close="youtube">×</button></div></div>
+    <div class="yt-content"><h2><span class="yt-badge">▶</span> YouTube</h2><form id="yt-search"><input id="yt-query" placeholder="Pega un enlace de YouTube o ID del vídeo…" required><button>Reproducir</button></form><div class="welcome" id="yt-welcome"><div class="play">▶</div><h3>Reproduce vídeos aquí</h3><p>Pega un enlace de YouTube o el ID del vídeo en el campo de arriba. El reproductor aparecerá dentro de Nova PC, sin abrir otra pestaña.</p></div><div id="yt-error" class="yt-message hidden" role="status"></div><iframe id="yt-frame" title="Reproductor de YouTube" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+  </section>
+  <section class="window hidden small" id="about-window" data-window="about"><div class="titlebar" data-drag><span>✦ &nbsp; Acerca de Nova PC</span><div class="controls"><button data-minimize="about">—</button><button data-maximize="about">□</button><button class="close" data-close="about">×</button></div></div><div class="about"><div class="about-logo">✦</div><h2>Nova PC</h2><p>Un escritorio virtual que funciona en tu navegador.</p><p class="subtle">Versión 0.1 · Web</p><p class="subtle">No es un sistema operativo real ni ejecuta aplicaciones de Windows.</p></div></section>
+  <div class="toast hidden" id="toast" role="status"></div>
+  <footer class="taskbar"><button id="start" class="start">✦</button><button class="task-app" data-open="browser" title="Navegador">◉</button><button class="task-app" data-open="youtube" title="YouTube">▶</button><button class="task-app" data-open="about" title="Acerca de">⚙</button><div class="spacer"></div><div class="tray">⌁ &nbsp; ◖ &nbsp; <span id="clock">--:--</span></div></footer>
+  <div class="start-menu hidden" id="start-menu"><div class="search-label">Buscar aplicaciones</div><h4>Ancladas</h4><div class="start-grid"><button data-open="browser">◉<span>Navegador</span></button><button data-open="youtube">▶<span>YouTube</span></button><button data-open="about">⚙<span>Acerca de</span></button></div><div class="start-bottom">✦ Nova PC <button id="start-close">Cerrar</button></div></div>
+</div><script src="script.js"></script></body></html>
